@@ -1,41 +1,55 @@
-# Tugas Rutin 6 - Interactive Quiz App
+# Tugas Rutin 8 - CRUD Data Mahasiswa (PHP dan MySQL)
 
-Tugas matakuliah Pemrograman Web tentang JavaScript DOM dan Events. Aplikasi kuis interaktif tentang Pemrograman Web yang berjalan sepenuhnya di browser.
+Tugas matakuliah Pemrograman Web. Aplikasi CRUD (Create, Read, Update, Delete) untuk mengelola data mahasiswa memakai PHP dan MySQL.
 
-Repository: https://github.com/androomeda911-byte/TugasWeb-Pertemuan6-QuizzApp
+Repository: https://github.com/androomeda911-byte/TugasWeb-Pertemuan8-CRUD
 
 ## Fitur
 
-- 5 pertanyaan pilihan ganda tentang Pemrograman Web
-- Pilihan jawaban dibuat secara dinamis dengan JavaScript
-- Indikator progress (Soal 1 dari 5) dan progress bar
-- Skor yang diperbarui setiap kali menjawab
-- Feedback langsung setelah memilih jawaban
-- Tombol lanjut yang baru aktif setelah jawaban dipilih
-- Halaman hasil berisi skor akhir, pesan, dan high score
-- Tombol ulangi kuis
+- Menampilkan daftar mahasiswa
+- Menambah data mahasiswa
+- Mengubah data mahasiswa
+- Menghapus data mahasiswa
+
+## Database
+
+- Nama database: `akademik`
+- Tabel: `mahasiswa`
+
+| Kolom | Tipe | Keterangan |
+|---|---|---|
+| `id` | int(11) | Primary key, auto increment |
+| `nama` | varchar(100) | Nama mahasiswa |
+| `nim` | varchar(20) | Nomor induk mahasiswa |
+| `alamat` | varchar(255) | Alamat, boleh kosong |
+
+Struktur dan data awal ada di file `akademik.sql`.
 
 ## Teknologi
 
-- HTML
-- CSS
-- JavaScript (DOM manipulation dan event handling)
+- PHP 8
+- MySQL / MariaDB
+- phpMyAdmin
+- XAMPP
 
 ## Struktur Folder
 
 ```
-TugasWeb-Pertemuan6-QuizzApp/
-├── index.html
-├── style.css
-├── app.js
+TugasWeb-Pertemuan8-CRUD/
+├── akademik/        (source code aplikasi)
+├── akademik.sql     (dump database)
 └── README.md
 ```
 
 ## Cara Menjalankan
 
-1. Clone atau download repository ini.
-2. Buka `index.html` di browser, atau gunakan Live Server di VS Code.
-3. Tidak perlu install apa pun.
+1. Install XAMPP, lalu jalankan **Apache** dan **MySQL** dari XAMPP Control Panel.
+2. Buka phpMyAdmin (`http://localhost/phpmyadmin`), buat database baru bernama `akademik`.
+3. Pilih database `akademik`, buka tab **Import**, lalu pilih file `akademik.sql`.
+4. Copy folder `akademik/` ke `C:\xampp\htdocs\`.
+5. Buka `http://localhost/akademik/` di browser.
+
+Kalau koneksi database gagal, cek pengaturan host, username, password, dan nama database di file koneksi di dalam folder `akademik/`.
 
 ## Identitas
 
